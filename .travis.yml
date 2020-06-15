@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 14
+
+before_script:
+  - |
+    (
+      cd openid-server 
+      npm install
+    )
+
+script:
+  - |
+    (
+      cd openid-server
+      npm run lint
+      npm run build
+      npm run dist:views
+      npm run webpack
+    )
