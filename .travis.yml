@@ -3,18 +3,10 @@ node_js:
   - 14
 
 before_script:
-  - |
-    (
-      cd openid-server 
-      npm install
-    )
+  - ( cd openid-server; npm install )
 
 script:
-  - |
-    (
-      cd openid-server
-      npm run lint
-      npm run build
-      npm run dist:views
-      npm run webpack
-    )
+  - ( cd openid-server; npm run lint )
+  - ( cd openid-server; npm run build )
+  - ( cd openid-server; npm run dist:views )
+  - ( cd openid-server; npm run webpack )
