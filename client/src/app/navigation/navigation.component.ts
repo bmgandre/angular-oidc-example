@@ -12,20 +12,20 @@ export class NavigationComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
 
   constructor(
-    private _oidcSecurityService: OidcSecurityService,
-    public _mediaObserver: MediaObserver
+    private oidcSecurityService: OidcSecurityService,
+    public mediaObserver: MediaObserver
   ) { }
 
   ngOnInit() {
-    this.isLoggedIn$ = this._oidcSecurityService.isAuthenticated$;
+    this.isLoggedIn$ = this.oidcSecurityService.isAuthenticated$;
   }
 
   login() {
-    this._oidcSecurityService.authorize();
+    this.oidcSecurityService.authorize();
   }
 
   logout() {
-    this._oidcSecurityService.logoff();
+    this.oidcSecurityService.logoff();
   }
 
 }

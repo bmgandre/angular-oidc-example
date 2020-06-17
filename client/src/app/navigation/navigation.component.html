@@ -12,8 +12,8 @@
   </mat-toolbar>
 
   <mat-sidenav-container class="app-navigation-container">
-    <mat-sidenav #snav class="app-navigation-sidenav" [fixedInViewport]="_mediaObserver.isActive('xs')"
-      [mode]="_mediaObserver.isActive('xs') ? 'over' : 'side'" fixedTopGap="64">
+    <mat-sidenav #snav class="app-navigation-sidenav" [fixedInViewport]="mediaObserver.isActive('xs')"
+      [mode]="mediaObserver.isActive('xs') ? 'over' : 'side'" fixedTopGap="64">
       <mat-nav-list>
         <a mat-list-item routerLink="/" i18n>Main Page</a>
         <mat-divider></mat-divider>

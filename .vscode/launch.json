@@ -2,6 +2,19 @@
     "version": "0.2.0",
     "configurations": [
       {
+        "name": "client start",
+        "request": "launch",
+        "runtimeArgs": [
+          "start"
+        ],
+        "runtimeExecutable": "npm",
+        "cwd": "${workspaceFolder}/client",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "pwa-node"
+      },
+      {
         "type": "chrome",
         "request": "launch",
         "name": "client Chrome",

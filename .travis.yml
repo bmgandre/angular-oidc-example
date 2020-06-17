@@ -4,9 +4,12 @@ node_js:
 
 before_script:
   - ( cd openid-server; npm install )
+  - ( cd client; npm install )
 
 script:
   - ( cd openid-server; npm run lint )
   - ( cd openid-server; npm run build )
   - ( cd openid-server; npm run dist:views )
   - ( cd openid-server; npm run webpack )
+  - ( cd client; ng lint )
+  - ( cd client; ng build )
