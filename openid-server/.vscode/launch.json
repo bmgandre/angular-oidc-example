@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "nodemon",
+      "program": "${workspaceFolder}/src/server.ts",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Chrome against localhost:5000",
+      "url": "http://localhost:5000",
+      "webRoot": "${workspaceFolder}",
+      "linux": {
+        "runtimeExecutable": "/usr/bin/chromium",
+      },
+      "sourceMaps": true,
+      "userDataDir": true
+    },
+  ]
+}

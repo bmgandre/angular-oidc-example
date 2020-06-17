@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "client Chrome",
+        "url": "http://localhost:4200",
+        "webRoot": "${workspaceFolder}/client",
+        "linux": {
+          "runtimeExecutable": "/usr/bin/chromium",
+        },
+        "sourceMaps": true,
+        "userDataDir": true
+      },
+      {
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "name": "openid-server nodemon",
+        "program": "${workspaceFolder}/openid-server/src/server.ts",
+        "cwd": "${workspaceFolder}/openid-server/",
+        "request": "launch",
+        "restart": true,
+        "runtimeExecutable": "${workspaceFolder}/openid-server/node_modules/.bin/nodemon",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "pwa-node"
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "openid-server Chrome",
+        "url": "http://localhost:5000",
+        "webRoot": "${workspaceFolder}",
+        "linux": {
+          "runtimeExecutable": "/usr/bin/chromium",
+        },
+        "sourceMaps": true,
+        "userDataDir": true
+      },
+    ]
+  }
+  
