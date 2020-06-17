@@ -36,10 +36,11 @@ function getDefaultConfiguration(): Configuration {
         clients: [
             {
                 client_id: 'angular_spa',
-                redirect_uris: ['http://localhost:4200/auth-callback'],
+                redirect_uris: ['http://localhost:4200'],
                 response_types: ['code'],
                 grant_types: ['authorization_code'],
                 token_endpoint_auth_method: 'none',
+                post_logout_redirect_uris: ['http://localhost:4200']
             },
         ],
         interactions: {
@@ -64,6 +65,7 @@ function getDefaultConfiguration(): Configuration {
             deviceFlow: { enabled: true }, // defaults to false
             introspection: { enabled: true }, // defaults to false
             revocation: { enabled: true }, // defaults to false
+            sessionManagement: { enabled: true }
         },
         jwks: {
             keys: [

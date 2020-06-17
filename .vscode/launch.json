@@ -2,6 +2,18 @@
     "version": "0.2.0",
     "configurations": [
       {
+        "type": "chrome",
+        "request": "launch",
+        "name": "client Chrome",
+        "url": "http://localhost:4200",
+        "webRoot": "${workspaceFolder}/client",
+        "linux": {
+          "runtimeExecutable": "/usr/bin/chromium",
+        },
+        "sourceMaps": true,
+        "userDataDir": true
+      },
+      {
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
         "name": "openid-server nodemon",
